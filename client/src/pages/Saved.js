@@ -1,6 +1,8 @@
 import React from 'react';
 import List from '../components/List';
 import API from '../utils/API';
+import toaster from 'toasted-notes';
+import 'toasted-notes/src/styles.css';
 
 class Saved extends React.Component {
   constructor(props) {
@@ -24,6 +26,8 @@ class Saved extends React.Component {
       });
 
       this.setState({books: newBooks});
+
+      toaster.notify("Deleted!", { duration: 2000});
     });
   } 
   

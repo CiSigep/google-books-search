@@ -2,6 +2,8 @@ import React from 'react';
 import API from '../utils/API';
 import SearchForm from '../components/SearchForm';
 import List from '../components/List';
+import toaster from 'toasted-notes';
+import 'toasted-notes/src/styles.css';
 
 class Search extends React.Component {
 
@@ -21,7 +23,7 @@ class Search extends React.Component {
 
   save = book => {
     API.saveBook(book, res => {
-      console.log("saved");
+      toaster.notify("Saved!", { duration: 2000});
     });
   }
 
