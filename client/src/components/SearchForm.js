@@ -1,5 +1,6 @@
 import React from 'react';
 
+// The search form, searches for books when the search button is clicked.
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);

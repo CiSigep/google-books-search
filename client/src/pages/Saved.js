@@ -4,6 +4,7 @@ import API from '../utils/API';
 import toaster from 'toasted-notes';
 import 'toasted-notes/src/styles.css';
 
+// Saved page, displays the saved books
 class Saved extends React.Component {
   constructor(props) {
     super(props);
@@ -13,12 +14,14 @@ class Saved extends React.Component {
     }
   }
 
+  // Get the books the user has saved.
   componentDidMount(){
     API.getSavedBooks(res => {
       this.setState({books: res});
     });
   }
 
+  // Delete a saved book and remove it from the list.
   deleteBook = book => {
     API.deleteBook(book, res => {
       let newBooks = this.state.books.filter(ele => {

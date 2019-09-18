@@ -1,6 +1,7 @@
 import React from 'react';
 import ListItem from './ListItem';
 
+// The list of books at the bottom of the page, used in both Search and saved.
 const List = (props) => {
   return (
     <div className="card col-12 border border-dark">

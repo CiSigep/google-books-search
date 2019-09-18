@@ -1,5 +1,6 @@
 import React from "react";
 
+// A basic Jumbotron for the page
 function Jumbotron(props) {
   return(
   <div className="jumbotron border border-dark text-center">

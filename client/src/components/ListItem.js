@@ -1,5 +1,6 @@
 import React from 'react';
 
+// An Item in the list, displays book information.
 const ListItem = props => {
 
   return (

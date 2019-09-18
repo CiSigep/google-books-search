@@ -1,5 +1,6 @@
 import React from "react";
 
+// The navbar at the top of the page
 function Navbar(props) {
   return(
     <nav className="navbar bg-dark navbar-dark mb-2">

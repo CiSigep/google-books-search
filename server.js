@@ -8,6 +8,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Production file paths
 if(process.env.NODE_ENV === "production"){
   app.use(express.static(path.join("client", "build")));
 }

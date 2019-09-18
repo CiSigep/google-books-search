@@ -5,6 +5,7 @@ import List from '../components/List';
 import toaster from 'toasted-notes';
 import 'toasted-notes/src/styles.css';
 
+// Search page for books.
 class Search extends React.Component {
 
   constructor(props){
@@ -15,12 +16,14 @@ class Search extends React.Component {
     }
   }
 
+  // Search for books
   search = query => {
     API.searchBooks(query, res => {
       this.setState({books: res});
     });
   };
 
+  // Save a book.
   save = book => {
     API.saveBook(book, res => {
       toaster.notify("Saved!", { duration: 2000});
