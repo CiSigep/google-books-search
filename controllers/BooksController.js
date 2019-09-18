@@ -55,7 +55,7 @@ router.delete("/api/books/:id", (req, res) =>{
   });
 });
 
-router.get("*", (req, res) => {
+router.get(["/", "/saved"], (req, res) => {
   res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
 });
 
