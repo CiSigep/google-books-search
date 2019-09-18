@@ -1,10 +1,16 @@
 import axios from 'axios';
 
 const API = {
-  ping: function(){
-    axios.get("/get").then(res => {
-      console.log(res.data.running);
+  searchBooks: (query, callback) => {
+    axios.get("/api/search/" + query).then(res => {
+      callback(res.data);
+    }).catch(err => {
+      console.log(err);
     });
+  },
+
+  saveBook: (book, callback) => {
+    axios.post("/api/books", book).then(callback).catch(err => console.log(err));
   }
 }
 
