@@ -59,8 +59,5 @@ router.get(["/", "/saved"], (req, res) => {
   res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
 });
 
-if(process.env.NODE_ENV === "production"){
-  router.use("static", express.static(path.join("..", "client", "build", "static")));
-}
 
 module.exports = router;

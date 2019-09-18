@@ -7,6 +7,10 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+if(process.env.NODE_ENV === "production"){
+  app.use("static", express.static(path.join("..", "client", "build")));
+}
+
 app.use(require("./controllers/BooksController"));
 
 
