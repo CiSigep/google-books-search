@@ -60,7 +60,7 @@ router.get(["/", "/saved"], (req, res) => {
 });
 
 if(process.env.NODE_ENV === "production"){
-  router.use("static", express.static(path.join("..", "client", "build")));
+  router.use("static", express.static(path.join("..", "client", "build", "static")));
 }
 
 module.exports = router;
