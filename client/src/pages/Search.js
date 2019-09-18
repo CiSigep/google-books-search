@@ -1,7 +1,7 @@
 import React from 'react';
 import API from '../utils/API';
 import SearchForm from '../components/SearchForm';
-import SearchList from '../components/SearchList';
+import List from '../components/List';
 
 class Search extends React.Component {
 
@@ -32,7 +32,7 @@ class Search extends React.Component {
           <SearchForm search={this.search}/>
         </div>
         <div className="row">
-          <SearchList books={this.state.books} saveBook={this.save}/>
+          <List books={this.state.books} buttonTxt="Save" title="Results" actionHandler={this.save}/>
         </div>
       </div>
     );
